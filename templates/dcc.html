@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-eqiuv="content-type" content="text/html; charset=windows-1252">
+        <meta charset="utf-8">
+        <title>
+            {{ the_title }}
+        </title>
+        <link rel="stylesheet" href="/static/dcc.css">
+    </head>
+    <body>
+        <h2>
+            {{ the_heading }}
+        </h2>
+        <form method="POST" action="/character_funnel" class="check-options">
+            <p><input type="checkbox" name="suitability" checked /> Check suitability</p>
+            <p><input type="checkbox" name="nohuman" /> No humans!</p>
+            <p><input type="checkbox" name="nodwarf" /> No dwarves!</p>
+            <p><input type="checkbox" name="noelf" /> No elves!</p>
+            <p><input type="checkbox" name="nohalfling" /> No halflings!</p>
+            <p><input type="submit" value="Let's roll!" /></p>
+        </form>
+        <div>
+            <p>Explanation</p>
+            <p class="explanation">The purpose of this website is to randomly generate 4 zero-level characters for use in the Dungeon Crawl Classics RPG from Goodman Games. You will be presented with a printable 11x8.5 pdf that you can save and print if you like characters on it. If you don't like the characters, feel free to use the back button to come back to this page and try again.</p>
+            <p class="explanation">Standard procedure is to roll 3d6 for each attribute. If 'Check suitability' is checked, the app will reroll any characters that have a negative total attribute bonus. This idea is borrowed from the Lamentations of the Flame Princess OSR game.</p>
+            <p class="explanation">Standard procedure is to include 70% humans, 10% dwarves, 10% elves, 10% halflings/hobbits in the characters rolled. If you want to exclude any of these four 'races' from your results, you may by checking the appropriate box. You need to allow at least one of them though. If you check all the boxes to exclude all the races, the app will ignore all the checks and any of the four races will be allowed.</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+body {
+    background-color: #333333;
+}
+
+h1 {
+    color: #cccccc;
+    font-family: "Liberation Sans", sans-serif;
+}
+
+h2 {
+    color: #cccccc;
+    font-family: "Liberation Sans", sans-serif;
+}
+
+a:link {
+    color: #ccccff;
+    font-family: "Liberation Serif", serif;
+}
+
+a:visited {
+    color: #ccccff;
+    font-family: "Liberation Serif", serif;
+}

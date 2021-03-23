@@ -1,0 +1,31 @@
+body {
+    background-color: #99ccff;
+}
+
+h1 {
+    color: #000000;
+    font-family: "Liberation Sans", sans-serif;
+}
+
+h2 {
+    color: #000000;
+    font-family: "Liberation Sans", sans-serif;
+}
+
+.check-options {
+    color: #000000;
+    font-family: "Liberation Sans", sans-serif;
+    font-size: large;
+}
+
+.explanation {
+    color: #000000;
+    font-family: "Liberation Serif", serif;
+    font-size: medium;
+}
+
+.links-list {
+    color: #000000;
+    font-family: "Liberation Serif", serif;
+    font-size: medium;
+}

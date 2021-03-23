@@ -1,0 +1,47 @@
+<!DOCTYPE svg PUBLIC "=//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xml:space="preserve"
+    width="1056" height="816">
+
+    <style type="text/css" >
+        <![CDATA[
+            rect {
+                fill: None;
+                stroke: #000000;
+                stroke-width: 1;
+            }
+
+            rect.background {
+                fill: #ffffff;
+                stroke: None;
+            }
+
+            rect.placeholder {
+                fill: #0000ff;
+                stroke: #ff0000;
+                stroke-width: 1;
+            }
+
+            text {
+                fill: #000000;
+            }            }
+        ]]>
+    </style>
+
+    <g id="sheet1" class="charsheet" transform="translate(0, 0)">
+
+    </g>
+    <g id="sheet2" class="charsheet" transform="translate(528, 0)">
+
+    </g>
+    <g id="sheet3" class="charsheet" transform="translate(0, 408)">
+
+    </g>
+    <g id="sheet4" class="charsheet" transform="translate(528, 408)">
+
+    </g>
+
+
+</svg>

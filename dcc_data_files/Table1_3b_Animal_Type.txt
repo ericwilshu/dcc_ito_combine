@@ -1,0 +1,7 @@
+Hen
+Sheep
+Goat
+Cow
+Duck
+Goose
+Mule

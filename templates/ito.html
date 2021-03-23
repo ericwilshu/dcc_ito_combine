@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-eqiuv="content-type" content="text/html; charset=windows-1252">
+        <meta charset="utf-8">
+        <title>
+            {{ the_title }}
+        </title>
+        <link rel="stylesheet" href="/static/ito.css">
+    </head>
+    <body>
+        <h2>
+            {{ the_heading }}
+        </h2>
+        <form method="POST" action="/character_sheet" class="check-options">
+            <p><input type="radio" name="Num" value="1" checked /><label for="One">One character</label><br />
+            <input type="radio" name="Num" value="2"/><label for="Two">Two characters</label><br />
+            <input type="radio" name="Num" value="4" /><label for="Four">Four characters</label></p>
+            <input type="submit" value="Let's roll!" /></p>
+        </form>
+        <div>
+            <p>Explanation</p>
+            <p class="explanation">The purpose of this page is to randomly generate characters for the Into the Odd RPG by Chris McDowall.
+            You will be presented with a printable 11x8.5 pdf that you can save a print if you like the character/s
+            on it. If you don't like it/them, feel free to use the back button to come back to this page and try again.</p>
+            <p class="explanation">You can get one, two, or four characters on a sheet, by choosing one of the options
+            above.</p>
+        </div>
+    </body>

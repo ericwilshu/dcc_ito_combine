@@ -1,0 +1,25 @@
+<g class="content">
+  <text style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 42px; white-space: pre;" x="219.523" y="204.86" id="strength_stat"/>
+  <text style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 42px; white-space: pre;" x="594.366" y="204.851" id="dexterity_stat"/>
+  <text style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 42px; white-space: pre;" x="219.523" y="351.204" id="willpower_stat"/>
+  <text style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 42px; white-space: pre;" x="595.366" y="351.195" id="hitpoints_stat"/>
+
+  <text transform="matrix(1.677389, 0, 0, 1.677389, 587.974731, -156.05423)" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 12px; white-space: pre;" id="equipment_list1" x="-295.87200927734375" y="462.5379943847656"></text>
+  <text transform="matrix(1.677389, 0, 0, 1.677389, 587.974731, -156.05423)" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 12px; white-space: pre;" id="equipment_list2" x="-295.87200927734375" y="474.5379943847656"></text>
+  <text transform="matrix(1.677389, 0, 0, 1.677389, 587.974731, -156.05423)" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 12px; white-space: pre;" id="equipment_list3" x="-295.87200927734375" y="486.5379943847656"></text>
+  <text transform="matrix(1.677389, 0, 0, 1.677389, 587.974731, -156.05423)" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 12px; white-space: pre;" id="equipment_list4" x="-295.87200927734375" y="498.5379943847656"></text>
+
+  <text transform="matrix(1.677389, 0, 0, 1.677389, 979.599792, -155.520355)" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 12px; white-space: pre;" id="companions_list" x="-295.87200927734375" y="462.5379943847656"></text>
+
+  <text transform="matrix(1.677389, 0, 0, 1.677389, 589.599792, 104.148727)" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 12px; white-space: pre;" id="specialcharacteristics_list1" x="-295.87200927734375" y="462.5379943847656"></text>
+  <text transform="matrix(1.677389, 0, 0, 1.677389, 589.599792, 104.148727)" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 12px; white-space: pre;" id="specialcharacteristics_list2" x="-295.87200927734375" y="474.5379943847656"></text>
+
+  <text transform="matrix(1.52269, 0, 0, 1.52269, 933.73645, 171.463943)" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 9.53863px; line-height: 17.1695px; white-space: pre;" id="arcanum_info1"  x="-295.87200927734375" y="462.5379943847656"></text>
+  <text transform="matrix(1.52269, 0, 0, 1.52269, 933.73645, 171.463943)" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 9.53863px; line-height: 17.1695px; white-space: pre;" id="arcanum_info2"  x="-295.87200927734375" y="472.5379943847656"></text>
+  <text transform="matrix(1.52269, 0, 0, 1.52269, 933.73645, 171.463943)" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 9.53863px; line-height: 17.1695px; white-space: pre;" id="arcanum_info3"  x="-295.87200927734375" y="482.5379943847656"></text>
+  <text transform="matrix(1.52269, 0, 0, 1.52269, 933.73645, 171.463943)" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 9.53863px; line-height: 17.1695px; white-space: pre;" id="arcanum_info4"  x="-295.87200927734375" y="492.5379943847656"></text>
+  <text transform="matrix(1.52269, 0, 0, 1.52269, 933.73645, 171.463943)" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 9.53863px; line-height: 17.1695px; white-space: pre;" id="arcanum_info5"  x="-295.87200927734375" y="502.5379943847656"></text>
+  <text transform="matrix(1.52269, 0, 0, 1.52269, 933.73645, 171.463943)" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 9.53863px; line-height: 17.1695px; white-space: pre;" id="arcanum_info6"  x="-295.87200927734375" y="512.5379943847656"></text>
+  <text transform="matrix(1.52269, 0, 0, 1.52269, 933.73645, 171.463943)" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 9.53863px; line-height: 17.1695px; white-space: pre;" id="arcanum_info7"  x="-295.87200927734375" y="522.5379943847656"></text>
+  <text transform="matrix(1.52269, 0, 0, 1.52269, 933.73645, 171.463943)" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 9.53863px; line-height: 17.1695px; white-space: pre;" id="arcanum_info8"  x="-295.87200927734375" y="532.5379943847656"></text>
+</g>
