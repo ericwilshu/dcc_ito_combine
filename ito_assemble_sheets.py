@@ -57,9 +57,13 @@ import root_path
 #import pprint
 
 ROOT_PATH = root_path.get_root_path()
-TEMP_SVG_SHEET = "finished_sheet.svg"
 
 def make_sheet(no_of_chars):
+    dt = datetime.datetime.now()
+    new_svg_name = "ITO_char_sheet{}-{}-{}_{}-{}-{}.svg".format(dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second)
+    new_svg_path = "{}/static/ito_new_sheets/{}".format(ROOT_PATH, new_svg_name)
+    new_pdf_name = "ITO_char_sheet{}-{}-{}_{}-{}-{}.pdf".format(dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second)
+    new_pdf_path = "{}/static/ito_new_sheets/{}".format(ROOT_PATH, new_pdf_name)
 
     if no_of_chars == 1:
         blank_sheet = "{}svg_files/ito_char_sheet_blank_1x1.svg".format(ROOT_PATH)
@@ -93,17 +97,13 @@ def make_sheet(no_of_chars):
             elif element.get("id") == "sheet4":
                 element.append(char_info.pop(0))
 
-    to_write_to = open(TEMP_SVG_SHEET, "w")
+    to_write_to = open(new_svg_path, "w")
     to_write_to.write(et.tostring(sheet_to_fill, encoding="unicode"))
     to_write_to.close()
 
-    dt = datetime.datetime.now()
-    new_pdf_name = "new_char_sheet{}-{}-{}_{}-{}-{}.pdf".format(dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second)
-    new_pdf_path = "{}/static/ito_new_sheets/{}".format(ROOT_PATH, new_pdf_name)
-
-    cairosvg.svg2pdf(url=TEMP_SVG_SHEET, write_to=new_pdf_path)
-    os.remove(TEMP_SVG_SHEET)
-    return new_pdf_name
+    cairosvg.svg2pdf(url=new_svg_path, write_to=new_pdf_path)
+    #os.remove(TEMP_SVG_SHEET)
+    return (new_svg_name, new_pdf_name)
 
 
 

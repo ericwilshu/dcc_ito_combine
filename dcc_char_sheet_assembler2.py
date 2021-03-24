@@ -27,6 +27,8 @@ Dependencies:
         AppendixL.csv
 """
 from lxml import etree as et
+import datetime
+from cairosvg import svg2pdf as s2p
 import dcc_character_generator2
 import root_path
 from dcc_char_sheet_creator2 import writeSVG
@@ -35,8 +37,16 @@ ROOT_PATH = root_path.get_root_path()
 
 def assemble_sheets(dataDict, testSuitability, noHuman, noDwarf, noElf, noHalfling):
     """Put 4 character sheets from char_sheet_creator2 together on one 11'x8.5' .svg."""
-    NEW_SHEET_SVG = ROOT_PATH + "static/new_sheet.svg"
+    #NEW_SHEET_SVG = ROOT_PATH + "static/new_sheet.svg"
     TWO_BY_TWO_TEMPLATE = ROOT_PATH + "svg_files/dcc_2x2_template_blank.svg"
+
+    #Get the current date and time to label the .pdf file.
+    now = datetime.datetime.today().strftime("%Y-%m-%d_%H:%M:%S")
+
+    new_svg_name = "DCC_char_sheet" + now + ".svg"
+    new_svg_path = ROOT_PATH + "static/dcc_new_sheets/" + new_svg_name
+    new_pdf_name = "DCC_char_sheet" + now + ".pdf"
+    new_pdf_path = ROOT_PATH + "static/dcc_new_sheets/" + new_pdf_name
 
     #Get four characters on four sheets.
     #Each sheet is an lxml etree object.
@@ -59,7 +69,10 @@ def assemble_sheets(dataDict, testSuitability, noHuman, noDwarf, noElf, noHalfli
         if element.get("class") == "charsheet":
             element.append(to_write.pop(0))
     #Write the filled out 2x2 template to an .svg file.
-    file = open(NEW_SHEET_SVG, "w")
+    file = open(new_svg_path, "w")
     file.write(et.tostring(two_by_two_temp, encoding="unicode"))
     file.close()
-    return NEW_SHEET_SVG
+
+    s2p(url=new_svg_path, write_to=new_pdf_path)
+
+    return new_svg_name, new_pdf_name

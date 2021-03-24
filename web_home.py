@@ -50,22 +50,29 @@ def character_funnel():
 
     #Get the current date and time to label the .pdf file.
     now = datetime.datetime.today().strftime("%Y-%m-%d_%H:%M:%S")
-    #NEW_SHEET_PDF = "/home/ericws/mysite/static/new_sheets/" + now + ".pdf"
-    NEW_SHEET_PDF = ROOT_PATH + "static/dcc_new_sheets/" + now + ".pdf"
-    #NEW_SHEET_PDF_TO_RETURN = "/static/new_sheets/" + now + ".pdf"
-    NEW_SHEET_PDF_TO_RETURN = now + ".pdf"
+
+    new_svg_name = now + ".svg"
+    new_svg_path = ROOT_PATH + "static/dcc_new_sheets/" + new_svg_name
+    new_pdf_name = now + ".pdf"
+    new_pdf_path = ROOT_PATH + "static/dcc_new_sheets/" + new_pdf_name
+
 
     #Assemble the sheet by running char_sheet_assembler2.
-    new_sheet = dcc_char_sheet_assembler2.assemble_sheets(dataDict, suitability, nohuman, nodwarf, noelf, nohalfling)
+    new_svg_sheet, new_pdf_name = dcc_char_sheet_assembler2.assemble_sheets(dataDict, suitability, nohuman, nodwarf, noelf, nohalfling)
+
     #Convert from .svg to .pdf with cairosvg module.
-    s2p(url=new_sheet, write_to=NEW_SHEET_PDF)
+    #s2p(url=new_sheet, write_to=NEW_SHEET_PDF)
+
     #Render a new weblage with the .pdf on it for the user to save if they want.
     #return render_template('display_sheet.html', the_title="DCC 0 level characters", the_sheet=NEW_SHEET_PDF_TO_RETURN)
-    print(ROOT_PATH + 'static/dcc_new_sheets/' + NEW_SHEET_PDF_TO_RETURN)
+    #print(ROOT_PATH + 'static/dcc_new_sheets/' + NEW_SHEET_PDF_TO_RETURN)
+
     #return send_from_directory(ROOT_PATH + 'static/dcc_new_sheets/', NEW_SHEET_PDF_TO_RETURN)
     return render_template('display_sheet.html',
         the_title="DCC Character Funnel",
-        the_sheet="/static/dcc_new_sheets/{}".format(NEW_SHEET_PDF_TO_RETURN)
+        the_sheet="/static/dcc_new_sheets/{}".format(new_svg_sheet),
+        the_download = "/static/dcc_new_sheets/{}".format(new_pdf_name),
+        the_way_back = "/dcc"
     )
 
 
@@ -73,11 +80,13 @@ def character_funnel():
 def character_sheet():
     num_of_chars = int(request.form.get('Num'))
 
-    new_sheet_name = ito_assemble_sheets.make_sheet(num_of_chars)
+    new_svg_name, new_pdf_name = ito_assemble_sheets.make_sheet(num_of_chars)
     #return send_from_directory("{}static/ito_new_sheets/".format(ROOT_PATH), new_sheet_name)
     return render_template('display_sheet.html',
         the_title="ITO Character Sheet",
-        the_sheet="/static/ito_new_sheets/{}".format(new_sheet_name))
+        the_sheet="/static/ito_new_sheets/{}".format(new_svg_name),
+        the_download = "/static/ito_new_sheets/{}".format(new_pdf_name),
+        the_way_back = "/ito")
 
 
 
