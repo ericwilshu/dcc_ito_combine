@@ -12,11 +12,6 @@ h2 {
     font-family: "Liberation Sans", sans-serif;
 }
 
-.title-link {
-    color: #000000;
-    text-decoration: none;
-}
-
 .check-options {
     color: #000000;
     font-family: "Liberation Sans", sans-serif;
@@ -29,8 +24,20 @@ h2 {
     font-size: medium;
 }
 
-.links-list {
-    color: #000000;
-    font-family: "Liberation Serif", serif;
-    font-size: medium;
+a:link {
+    color: #ffcc33;
+}
+
+a:visited {
+    color: #996600;
+}
+
+.title-link {
+    color: #996600;
+    font-family: "Liberation Sans", sans-serif;
+    text-decoration: none;
+}
+
+footer {
+    font-size: small;
 }

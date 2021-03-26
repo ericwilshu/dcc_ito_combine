@@ -12,6 +12,11 @@ h2 {
     font-family: "Liberation Sans", sans-serif;
 }
 
+p {
+    color: #cccccc;
+    font-family: "Liberation Serif", serif;
+}
+
 a:link {
     color: #ccccff;
     font-family: "Liberation Serif", serif;
@@ -20,4 +25,8 @@ a:link {
 a:visited {
     color: #ccccff;
     font-family: "Liberation Serif", serif;
+}
+
+footer {
+    font-size: small;
 }
