@@ -20,7 +20,7 @@ dataDict = dcc_import_data.getDataFiles(ROOT_PATH + 'dcc_data_files/')
 @app.route('/')
 def hello() -> 'html':
     """Provide a home page for onehpleft.com"""
-    return render_template('new_index.html')
+    return render_template('index.html')
 
 
 @app.route('/character_funnel', methods=['POST'])
