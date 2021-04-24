@@ -20,22 +20,7 @@ dataDict = dcc_import_data.getDataFiles(ROOT_PATH + 'dcc_data_files/')
 @app.route('/')
 def hello() -> 'html':
     """Provide a home page for onehpleft.com"""
-    return render_template('index.html')
-
-
-
-@app.route('/dcc')
-def dcc_app() -> 'html':
-    """Provide a simple web interface for the DCC app."""
-    return render_template('dcc.html', the_title="DCC Character Funnel", the_heading='Dungeon Crawl Classics 0 level character generator')
-
-
-
-@app.route('/ito')
-def ito_app() -> 'html':
-    """Provide a simple web interface for the ITO app."""
-    return render_template('ito.html', the_title="ITO Character Generator", the_heading="Into the Odd Character Generator")
-
+    return render_template('new_index.html')
 
 
 @app.route('/character_funnel', methods=['POST'])
