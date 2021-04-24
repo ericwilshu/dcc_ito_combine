@@ -1,0 +1,156 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-eqiuv="content-type" content="text/html; charset=windows-1252">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>One HP Left</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+            crossorigin="anonymous">
+
+        <style>
+            a:link, a:visited, a:hover, a:active {
+                color: #ff9900;
+            }
+            .border {
+                padding: 10px;
+            }
+            .border-primary {
+                margin-top: 10px;
+            }
+            .border-info {
+                margin-bottom: 10px;
+            }
+        </style>
+
+        <!--<link rel="stylesheet" href="/static/base.css">-->
+    </head>
+    <body class="bg-dark text-white">
+        <div class="container-fluid">
+            <div class="grid-system">
+                <div class=" border border-primary rounded">
+                    <div class="row">
+                        <h1 class="text-center col-sm-12 jumbotron bg-transparent text-light">onehpleft.com</h1>
+                    </div>
+
+                    <div class="row">
+                        <div id="explanation" class="text-justify col-sm-12">
+                            <p>Hello! Welcome to onehpleft.com!</p>
+                            <p>This site features two webapps for producing character sheets for <a href="https://en.wikipedia.org/wiki/Tabletop_role-playing_game">tabletop role playing games</a>. The games are <a href="https://goodman-games.com/dungeon-crawl-classics-rpg/">Dungeon Crawl Classics</a> by Joseph Goodman, published by Goodman Games, and <a href="https://www.drivethrurpg.com/product/145536/Into-the-Odd">Into the Odd</a> by Chris McDowall, published by Lost Pages.</p>
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+                <div class="border border-success rounded">
+                    <div class="row">
+                        <!--<h2 class="text-center col-sm-12"><a href='/dcc'>Dungeon Crawl Classics 0 Level Characters</a></h2>-->
+                        <h3 class="text-center col-sm-12">Dungeon Crawl Classics 0 Level Characters</h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4 d-flex flex-wrap align-content-center">
+                            <form method="POST" action="/character_funnel" class="check-options">
+                                <p><input type="checkbox" name="suitability" checked /> Check suitability</p>
+                                <p><input type="checkbox" name="nohuman" /> No humans!</p>
+                                <p><input type="checkbox" name="nodwarf" /> No dwarves!</p>
+                                <p><input type="checkbox" name="noelf" /> No elves!</p>
+                                <p><input type="checkbox" name="nohalfling" /> No halflings!</p>
+                                <p><input type="submit" value="Let's roll!" /></p>
+                            </form>
+                        </div>
+
+                        <div class="col-sm-8 text-justify">
+                            <p>The purpose of this website is to randomly generate 4 zero-level characters for use in the <a href="https://goodman-games.com/dungeon-crawl-classics-rpg/">Dungeon Crawl Classics</a> RPG from Goodman Games. You will be shown an image of the sheet and a link for downloading an 11x8.5 PDF of it. If you don't like the characters, feel free to use the back button to come back to this page and try again.</p>
+                            <p>Standard procedure is to roll 3d6 for each attribute. If 'Check suitability' is checked, the app will reroll any characters that have a negative total attribute bonus. This idea is borrowed from the <a href="https://www.lotfp.com/RPG/">Lamentations of the Flame Princess</a> OSR game.</p>
+                            <p>Standard procedure is to include 70% humans, 10% dwarves, 10% elves, 10% halflings/hobbits in the characters rolled. If you want to exclude any of these four 'races' from your results, you may by checking the appropriate box. You need to allow at least one of them though. If you check all the boxes to exclude all the races, the app will ignore all the checks and any of the four races will be allowed.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="border border-danger rounded">
+                    <div class="row">
+                        <!--<h2 class="text-center col-sm-12"><a href='/ito'>Into the Odd Characters</a></h2>-->
+                        <h3 class="text-center col-sm-12">Into the Odd Characters</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 d-flex flex-wrap align-content-center">
+                            <form method="POST" action="/character_sheet" class="check-options">
+                                <p><input type="radio" name="Num" value="1" checked /><label for="One"> One character</label><br />
+                                <input type="radio" name="Num" value="2"/><label for="Two"> Two characters</label><br />
+                                <input type="radio" name="Num" value="4" /><label for="Four"> Four characters</label></p>
+                                <input type="submit" value="Let's roll!" /></p>
+                            </form>
+                        </div>
+                        <div class="col-sm-8 text-justify">
+                            <p>The purpose of this page is to randomly generate characters for the <a href="https://www.drivethrurpg.com/product/145536/Into-the-Odd">Into the Odd</a> RPG by Chris McDowall.
+                            You will be shown an image of the sheet and a link for downloading an 8.5x11 PDF of it. If you don't like the rolls, feel free to use the back button to come back to this page and try again.</p>
+                            <p>You can get one, two, or four characters on a sheet, by choosing one of the options
+                            above.</p>
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+                <div class="border border-info rounded">
+                    <div class="row">
+                        <div id="links" class="col-sm-5">
+                            <h4>Links</h4>
+                            <ul>
+                                <li>
+                                    <a href="https://goodman-games.com/dungeon-crawl-classics-rpg/">
+                                        Dungeon Crawl Classics at Goodman Games
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://en.wikipedia.org/wiki/Dungeon_Crawl_Classics">
+                                        Dungeon Crawl Classics on Wikipedia
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.drivethrurpg.com/product/145536/Into-the-Odd">
+                                        Into the Odd on DriveThruRPG.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-2">
+                        </div>
+
+                        <footer id="copyright_stuff" class="col-sm-5">
+                            <p>&#169;2021 by Eric Shumaker</p>
+                            <p>Dungeon Crawl Classics and DCC RPG are trademarks of <a href="https://goodman-games.com/">Goodman Games</a>.</p>
+                            <p><a href="https://www.drivethrurpg.com/product/145536/Into-the-Odd">Into the Odd</a> is Chris McDowall's creation.</p>
+                        </footer>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin = "anonymous">
+        </script>
+
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin = "anonymous">
+        </script>
+
+        <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin = "anonymous">
+        </script>
+
+    </body>
+</html>
