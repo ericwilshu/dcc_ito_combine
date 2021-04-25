@@ -57,7 +57,7 @@ def character_funnel():
         the_title="DCC Character Funnel",
         the_sheet="/static/dcc_new_sheets/{}".format(new_svg_sheet),
         the_download = "/static/dcc_new_sheets/{}".format(new_pdf_name),
-        the_way_back = "/dcc"
+        the_way_back = "/"
     )
 
 
@@ -71,7 +71,7 @@ def character_sheet():
         the_title="ITO Character Sheet",
         the_sheet="/static/ito_new_sheets/{}".format(new_svg_name),
         the_download = "/static/ito_new_sheets/{}".format(new_pdf_name),
-        the_way_back = "/ito")
+        the_way_back = "/")
 
 
 
